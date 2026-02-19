@@ -1,0 +1,10 @@
+# Backend
+backend/node_modules/
+
+# Flutter
+finance_tracker/.dart_tool/
+finance_tracker/.flutter-plugins
+finance_tracker/.flutter-plugins-dependencies
+finance_tracker/build/
+finance_tracker/.packages
+finance_tracker/pubspec.lock
