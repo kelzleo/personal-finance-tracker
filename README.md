@@ -114,6 +114,14 @@ flutter run
 - **Riverpod** was chosen for state management because it is compile-safe, testable, and handles async states cleanly with `FutureProvider` and `autoDispose`.
 - **GoRouter** was chosen for navigation because it provides a declarative, URL-based routing system that scales well and integrates cleanly with Riverpod.
 - **Dio** was chosen over the default `http` package because it provides interceptors, better error handling, and timeout configuration out of the box.
+## Assumptions
+
+- The base URL is configured for Genymotion emulator (`10.0.3.2`). This needs to be changed depending on the device used — instructions are in the Configuration section above.
+- Transaction amounts are always stored as positive numbers. The `type` field (income or expense) determines whether it is money coming in or going out.
+- The edit screen was added beyond the three required screens since the PATCH endpoint was required by the API spec but had no corresponding UI.
+- Categories are predefined (Food, Transport, Shopping, Entertainment, Health, Salary, Freelance, Other) rather than user-defined for simplicity.
+
+
 ## Future Improvements
 
 Given more time, the following improvements would be made:
