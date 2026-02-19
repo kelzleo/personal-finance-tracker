@@ -114,3 +114,24 @@ flutter run
 - **Riverpod** was chosen for state management because it is compile-safe, testable, and handles async states cleanly with `FutureProvider` and `autoDispose`.
 - **GoRouter** was chosen for navigation because it provides a declarative, URL-based routing system that scales well and integrates cleanly with Riverpod.
 - **Dio** was chosen over the default `http` package because it provides interceptors, better error handling, and timeout configuration out of the box.
+## Future Improvements
+
+Given more time, the following improvements would be made:
+
+### Backend
+- **Persistent Database** — replace in-memory storage with SQLite or PostgreSQL so transaction data survives server restarts
+- **Authentication** — add JWT-based auth so each user has their own private transaction data
+- **Pagination** — add limit/offset pagination to `GET /transactions` to handle large datasets efficiently
+
+### Flutter App
+- **Spending Charts** — add pie or bar charts to visualize spending breakdown by category using a library like fl_chart
+- **Date Range Filtering** — allow users to filter transactions by a custom date range, not just by type
+- **Search** — add a search bar to find transactions by title or category
+- **Offline Support** — cache transactions locally using shared_preferences or Hive so the app works without a server connection
+- **Dark Mode** — add a dark theme toggle for better usability in low light
+- **CSV Export** — allow users to export their transaction history as a CSV file for use in spreadsheets
+
+### Code Quality
+- **Unit Tests** — add tests for all Express API endpoints using Jest or Mocha
+- **Widget Tests** — add Flutter widget tests for all three screens
+- **CI/CD Pipeline** — add GitHub Actions to run tests automatically on every push
